@@ -24,9 +24,13 @@ Below are responses to questions raised as limitations.
 
 **A3.** Limitation. But our contribution and primary aim is xxx.
 
-[1] An Optimal Transport Approach to Causal Inference, Torous et al 
-[2] Optimal transport weights for causal inference, Dunipace 
-[3] Deep treatment-adaptive network for causal inference, Li et al
+[1] Dunipace, Eric A. Optimal Transport Methods for Causal Inference, Multisample Testing, and Model Interpretation. Diss. Harvard University, 2021.
+
+[2] Dunipace, Eric. "Optimal transport weights for causal inference." arXiv preprint arXiv:2109.01991 (2021).
+
+[3] Torous, William, Florian Gunsilius, and Philippe Rigollet. "An Optimal Transport Approach to Causal Inference." arXiv preprint arXiv:2108.05858 (2021).
+
+[4] Li, Qian, et al. "Deep treatment-adaptive network for causal inference." The VLDB Journal (2022): 1-16.
 
 ## Reviewer #2
 
