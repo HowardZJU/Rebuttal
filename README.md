@@ -1,9 +1,11 @@
 # Materials for Response letter
-
-
-
 ## General Response
-Changes to the Final Draft
+Many thanks to the reviewers for these valuable comments on our manuscript. 
+These valuable comments are honestly helpful in improving our work, as well as important guidelines for further explorations. 
+We have carefully studied these comments and made responses which we hope meet with approval.
+The following are one-to-one responses to reviewers, where **Q** denotes the questions/limitations, and **A** denotes our responses.
+
+Considering the 
 
 Based on the reviewers' shared concerns, we will make the following changes in the final draft.
 
