@@ -5,6 +5,7 @@ These valuable comments are honestly helpful in improving our work, as well as i
 We have carefully studied these comments and made responses which we hope meet with approval.
 The following are one-to-one responses to reviewers, where **Q** denotes the questions/limitations, and **A** denotes our responses.
 
+![图片alt](./fig_rmpr.png "图片title")
 Considering the 
 
 Based on the reviewers' shared concerns, we will make the following changes in the final draft.
