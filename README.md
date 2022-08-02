@@ -1,8 +1,10 @@
 # Materials for Response letter
 ## General Response
 ### Q2
-The figure below reports the PEHE of ESCFR under different hyper-parameter $\kappa$. All ESCFR implementations outperform the strongest baseline CFR-WASS ( $\kappa=\infty$) on all batch sizes, most of which are statistically significant. As such, hyper-parameter is not necessarily the reason why ESCFR works well. This can be further supported by our extensive ablation and parameter studies in the manuscript.
 ![RMPR figure](./fig_rmpr.png "aaa")
+The figure above reports the PEHE of ESCFR under different hyper-parameter $\kappa$. 
+- All ESCFR implementations outperform the strongest baseline CFR-WASS ( $\kappa=\infty$) on all batch sizes, most of which are statistically significant. As such, hyper-parameter is not necessarily the reason why ESCFR works well. This can be further supported by our extensive ablation and parameter studies in the manuscript.
+- The best value of $\kappa$ increases as the batch size increases. It supports our claims in Section 3.2 in the manuscript. Specifically, for small batch size, the sampling outliers dominate the sampled batch, and a small $\kappa$ could relax the mass preservation constraint effectively, alliviating the mismatch to outliers, thus performing best and robust. For large batch size, the ralative noise of sampling outliers is reduced, and we can increase $\kappa$ to demand more samples to be matched, getting more accurate estimation of wasserstein distance. 
 
 
 ## Reviewer #1
