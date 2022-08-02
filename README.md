@@ -9,14 +9,14 @@ The figure above reports the PEHE of ESCFR under different hyper-parameter $\kap
 - Even with large batch sizes, oversized $\kappa$ does not perform well. Although the effect of sampling outliers is reduced, some patterns such as outcome imbalance are always present for all batch sizes, contributing to false matching given strong mass preserving constraint. As such, it is reasonable to witness this upper bound on best $\kappa$ that is independent of batch size.
 
 ## Reviewer #1
-### Comment 2
+### Concern 2
 Since accurate estimation of factual outcomes is the basis for causal inference, the batchsize, as well as learning rate, was finetuned based on TARNet at the very beginning, to improve the performance of factual estimation. We selected batchsize=32 due to its superior factual accuracy (R2, MSE of factual outcome estimation) on evaluation set. We provide the corresponding raw logs as follow.
 
  <img src="./batch_size.png" width = "800" height = "300" alt="" align=center />
 
 Please check the general response for the experiment results on large batch sizes.
 ## Reviewer #2
-### Comment 3
+### Concern 3
 
 One major concern would be the overall complexity of solving discrete optimal transport problem. 
 Exact algorithms, e.g. the interior-point method and network-simplex method, suffer from heavy computational cost of $\mathcal{O}(n^3\log n)$.
@@ -48,19 +48,22 @@ In addition, large relaxation parameter $\kappa$ makes the computed results more
 | Algorithm 2 | 0.0050+0.0011 | 0.0059+0.0008 | 0.0060+0.0011 | 0.0112+0.0014 | 0.0162+0.0016 | 0.1039+0.0033   |
 
 ## Reviewer #3
-### Comment 2
+### Concern 2
  <img src="./toy_example.png" width = "400" height = "300" alt="图片名称" align=center />
 
 A toy example is provided with visualization above. Let the ground truth $Y:=\sqrt{R_1^2+R_2^2+X^{\prime 2}}$ where $T$ is omitted as we only consider one group, $R_1$ and $R_2$ are the representations of observed confounders that have been aligned with Sinkhorn algorithm. Let the unobserved $X^\prime=0$ for control groups and $X^\prime=1$ for treated groups, which makes $X^\prime$ an unobserved confounder as it is related to Y and different between treatment groups. We find given balanced $R_1$ and $R_2$, the variation of $X^\prime$ is reflected by the variation of $Y$. As such, it is reasonable to employ $Y$ to calibrate $X^\prime$.
 
-### Comment 3
+### Concern 3
 
 It will be updated soooon!
 
-### Comment 4
+### Concern 4
+The figure below shows the AUUC, R2, RMSE and PEHE (from left to right) during training procedure, dynamically reported on the validation set.
+It showcases the advantage of AUUC as a criteria of model selection.
+Specifically, for the **purple** training curve, the best AUUC and RMSE would be at the 50-th epoch and the 90-th epoch, respectively. The ground-truth PEHE reaches the best at around the 50-th epoch, and then and then begins to deteriorate. The other two examples, represented by the red and green curves, follow a similar pattern.
  <img src="./auuc.png" width = "800" height = "150" alt="图片名称" align=center />
 
 
-### Comment 6
+### Concern 6
 Please check the general response for the performance of ESCFR and baselines on different batch sizes.
 
