@@ -1,7 +1,7 @@
 # Materials for Response letter
 ## General Response
 This is the supporting material for the comment 2 of reviewer 1 and the comment 4, comment 6 of reviewer 3.
- <img src="./fig_rmpr.png" width = "800" height = "300" alt="图片名称" align=center />
+ <img src="./fig_rmpr.png" width = "800" height = "300" alt="" align=center />
 
 The figure above reports the PEHE of ESCFR under different hyper-parameter $\kappa$. 
 - All ESCFR implementations outperform the strongest baseline CFR-WASS ( $\kappa=\infty$) on all batch sizes, most of which are statistically significant. As such, hyper-parameter is not necessarily the reason why ESCFR works well. This can be further supported by our extensive ablation and parameter studies in the manuscript.
@@ -12,7 +12,7 @@ The figure above reports the PEHE of ESCFR under different hyper-parameter $\kap
 ### Comment 2
 Since accurate estimation of factual outcomes is the basis for causal inference, the batchsize, as well as learning rate, was finetuned based on TARNet at the very beginning, to improve the performance of factual estimation. We selected batchsize=32 due to its superior factual accuracy (R2, MSE of factual outcome estimation) on evaluation set. We provide the corresponding raw logs as follow.
 
- <img src="./batch_size.png" width = "800" height = "300" alt="图片名称" align=center />
+ <img src="./batch_size.png" width = "800" height = "300" alt="" align=center />
 
 Please check the general response for the experiment results on large batch sizes.
 ## Reviewer #2
@@ -49,6 +49,8 @@ In addition, large relaxation parameter $\kappa$ makes the computed results more
 
 ## Reviewer #3
 ### Comment 2
+ <img src="./toy_example.pdf" width = "800" height = "300" alt="图片名称" align=center />
+
 A toy example is provided with visualization above. Let the ground truth $Y:=\sqrt{R_1^2+R_2^2+X^{\prime 2}}$ where $T$ is omitted as we only consider one group, $R_1$ and $R_2$ are the representations of observed confounders that have been aligned with Sinkhorn algorithm. Let the unobserved $X^\prime=0$ for control groups and $X^\prime=1$ for treated groups, which makes $X^\prime$ an unobserved confounder as it is related to Y and different between treatment groups. We find given balanced $R_1$ and $R_2$, the variation of $X^\prime$ is reflected by the variation of $Y$. As such, it is reasonable to employ $Y$ to calibrate $X^\prime$.
 
 ### Comment 3
