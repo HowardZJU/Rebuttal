@@ -1,6 +1,7 @@
 # Materials for Response letter
 ## General Response
 This is the supporting material for the comment 2 of reviewer 1 and the comment 4, comment 6 of reviewer 3.
+
  <img src="./fig_rmpr.png" width = "800" height = "300" alt="" align=center />
 
 The figure above reports the PEHE of ESCFR under different hyper-parameter $\kappa$. 
