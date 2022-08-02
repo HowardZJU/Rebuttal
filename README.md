@@ -49,7 +49,7 @@ In addition, large relaxation parameter $\kappa$ makes the computed results more
 
 ## Reviewer #3
 ### Comment 2
- <img src="./toy_example.png" width = "500" height = "500" alt="图片名称" align=center />
+ <img src="./toy_example.png" width = "400" height = "300" alt="图片名称" align=center />
 
 A toy example is provided with visualization above. Let the ground truth $Y:=\sqrt{R_1^2+R_2^2+X^{\prime 2}}$ where $T$ is omitted as we only consider one group, $R_1$ and $R_2$ are the representations of observed confounders that have been aligned with Sinkhorn algorithm. Let the unobserved $X^\prime=0$ for control groups and $X^\prime=1$ for treated groups, which makes $X^\prime$ an unobserved confounder as it is related to Y and different between treatment groups. We find given balanced $R_1$ and $R_2$, the variation of $X^\prime$ is reflected by the variation of $Y$. As such, it is reasonable to employ $Y$ to calibrate $X^\prime$.
 
