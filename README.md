@@ -1,7 +1,8 @@
 # Materials for Response letter
 ## General Response
 ### Q2
-![RMPR figure](./fig_rmpr.png "aaa")
+ <img src="./fig_rmpr.png" width = "800" height = "300" alt="图片名称" align=center />
+
 The figure above reports the PEHE of ESCFR under different hyper-parameter $\kappa$. 
 - All ESCFR implementations outperform the strongest baseline CFR-WASS ( $\kappa=\infty$) on all batch sizes, most of which are statistically significant. As such, hyper-parameter is not necessarily the reason why ESCFR works well. This can be further supported by our extensive ablation and parameter studies in the manuscript.
 - The optimal value of $\kappa$ increases with increasing batch size. For example, the optimal $\kappa$ is 1.0 for batchsize=32, and 5.0 for batchsize=128. It supports our claim in Section 3.2 of the manuscript. Specifically, for small batch sizes, where sampling outliers dominate the sampled batches, a small $\kappa$ can effectively relax the mass preservation constraint and avoid mis-matching outliers, thus performing optimally and robustly. For large batch sizes, the noise of sampling outliers is reduced, and it is reasonable to increase $\kappa$ to match more sample masses and obtain more accurate Wasserstein distance estimates.
@@ -10,7 +11,8 @@ The figure above reports the PEHE of ESCFR under different hyper-parameter $\kap
 ## Reviewer #1
 ### Q2
 Since accurate estimation of factual outcomes is the basis for causal inference, the batchsize, as well as learning rate, was finetuned based on TARNet at the very beginning, to improve the performance of factual estimation. We selected batchsize=32 due to its superior factual accuracy (R2, MSE of factual outcome estimation) on evaluation set. Raw logs are provided as follow.
-![Hyper-param figure](./batch_size.png "aaa")
+
+ <img src="./batch_size.png" width = "800" height = "300" alt="图片名称" align=center />
 
 ## Reviewer #2
 ### Q3
