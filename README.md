@@ -58,7 +58,7 @@ A toy example is provided with visualization above. Let the ground truth $Y:=\sq
 
 
 ### Comment 4
- <img src="./auuc.png" width = "800" height = "200" alt="图片名称" align=center />
+ <img src="./auuc.png" width = "800" height = "150" alt="图片名称" align=center />
 
 
 ### Comment 6
