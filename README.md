@@ -10,7 +10,7 @@ The figure above reports the PEHE of ESCFR under different hyper-parameter $\kap
 ## Reviewer #1
 ### Q2
 Since accurate estimation of factual outcomes is the basis for causal inference, the batchsize, as well as learning rate, was finetuned based on TARNet at the very beginning, to improve the performance of factual estimation. We selected batchsize=32 due to its superior factual accuracy (R2, MSE of factual outcome estimation) on evaluation set. Raw logs are available in this link
-![RMPR figure](./batch_size.png "aaa")
+![Hyper-param figure](./batch_size.png "aaa")
 
 ## Reviewer #2
 ### Q3
