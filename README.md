@@ -4,8 +4,8 @@
 ![RMPR figure](./fig_rmpr.png "aaa")
 The figure above reports the PEHE of ESCFR under different hyper-parameter $\kappa$. 
 - All ESCFR implementations outperform the strongest baseline CFR-WASS ( $\kappa=\infty$) on all batch sizes, most of which are statistically significant. As such, hyper-parameter is not necessarily the reason why ESCFR works well. This can be further supported by our extensive ablation and parameter studies in the manuscript.
-- The best value of $\kappa$ increases as the batch size increases. It supports our claims in Section 3.2 in the manuscript. Specifically, for small batch size, the sampling outliers dominate the sampled batch, and a small $\kappa$ could relax the mass preservation constraint effectively, alliviating the mismatch to outliers, thus performing best and robust. For large batch size, the ralative noise of sampling outliers is reduced, and we can increase $\kappa$ to demand more samples to be matched, getting more accurate estimation of wasserstein distance. 
-
+- The optimal value of $\kappa$ increases with increasing batch size. For example, the optimal $\kappa$ is 1.0 for batchsize=32, and 5.0 for batchsize=128. It supports our claim in Section 3.2 of the manuscript. Specifically, for small batch sizes, where sampling outliers dominate the sampled batches, a small $\kappa$ can effectively relax the mass preservation constraint and avoid mis-matching outliers, thus performing optimally and robustly. For large batch sizes, the noise of sampling outliers is reduced, and it is reasonable to increase $\kappa$ to match more sample masses and obtain more accurate Wasserstein distance estimates.
+- 
 
 ## Reviewer #1
 ### Q2
@@ -39,7 +39,7 @@ Notice that enlarging $\epsilon$ further speeds up the computation while making 
 
 Entropic regularization is still applicable to speed up the solution of the unbalanced optimal transport problem in RMPR, represented by the Sinkhorn-like algorithm~\cite{uotSink} in Algorithm 2. 
 Existing work~\cite{usink1} has proved that its total complexity is $\tilde{\mathcal{O}}(n^2/\epsilon)$.
-In addition, enlarging the relaxation parameter $\kappa$ makes the computed results more consistent to that by Sinkhorn algorithm, while significantly slows down the computation.
+In addition, large relaxation parameter $\kappa$ makes the computed results more consistent to that by Sinkhorn algorithm, significantly contributes to more iterations.
 
 | Parameter   | $\kappa$=0.1  | $\kappa$=0.5  | $\kappa$=1.0  | $\kappa$=5.0  | $\kappa$=10.0 | $\kappa$=100.0  |
 |-------------|---------------|---------------|---------------|---------------|---------------|-----------------|
